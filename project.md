@@ -165,12 +165,12 @@ N/A
 
 #### test case 1
 
-| ID   |        case name         |          pre-requisite           | procedure                                                    | expected result          | priority | author  | pass/fail |         comment          |
-| ---- | :----------------------: | :------------------------------: | :----------------------------------------------------------- | :----------------------- | :------: | ------- | :-------: | :----------------------: |
-| 1    | BowlingGame.py syntactic | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened              |    p1    | Anton_K |   pass    |                          |
-|      |                          |                                  | go to "problems" tab at  the bottom                          | tab opened               |    p1    |         |   pass    |                          |
-|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages |    p2    |         |   fail    |     28 weak warnings     |
-|      |                          |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option clicked           |    p1    |         |   pass    | changes committed to git |
-|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages |    p1    |         |           |                          |
-|      |                          |                                  |                                                              |                          |          |         |           |                          |
+| ID   |        case name         |          pre-requisite           | procedure                                                    | expected result              | priority | author  | pass/fail |           comment            |
+| ---- | :----------------------: | :------------------------------: | :----------------------------------------------------------- | :--------------------------- | :------: | ------- | :-------: | :--------------------------: |
+| 1    | BowlingGame.py syntactic | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened                  |    p1    | Anton_K |   pass    |                              |
+|      |                          |                                  | go to "problems" tab at  the bottom                          | tab opened                   |    p1    |         |   pass    |                              |
+|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages     |    p2    |         |   fail    |       28 weak warnings       |
+|      |                          |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option clicked               |    p1    |         |   pass    | changes are committed to git |
+|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages     |    p1    |         |   pass    |                              |
+|      |                          |                                  | check for other warnings or typos and fix them if possible   | no warnings or typo messages |    p1    |         |   pass    | changes are committed to git |
 
