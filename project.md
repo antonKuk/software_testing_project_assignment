@@ -169,8 +169,8 @@ N/A
 | ---- | :----------------------: | :------------------------------: | :----------------------------------------------------------- | :----------------------- | :------: | ------- | :-------: | :----------------------: |
 | 1    | BowlingGame.py syntactic | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened              |    p1    | Anton_K |   pass    |                          |
 |      |                          |                                  | go to "problems" tab at  the bottom                          | tab opened               |    p1    |         |   pass    |                          |
-|      |                          |                                  | check if  no weak warnings are displayed                     | no weak warning messages |    p2    |         |   fail    |     28 weak warnings     |
-|      |                          |                                  | if any weak warnings are displayed press alt+Enter and click "reformat the file" option | option clicked           |    p1    |         |   pass    | changes committed to git |
-|      |                          |                                  | check if  no weak warnings are displayed                     | no weak warning messages |    p1    |         |   fail    |     11 weak warnings     |
+|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages |    p2    |         |   fail    |     28 weak warnings     |
+|      |                          |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option clicked           |    p1    |         |   pass    | changes committed to git |
+|      |                          |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages |    p1    |         |           |                          |
 |      |                          |                                  |                                                              |                          |          |         |           |                          |
 
