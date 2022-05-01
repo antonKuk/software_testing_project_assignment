@@ -28,13 +28,13 @@ This test plan has following objectives:
 
 - game rules described in project assignment instructions:
 
-  - game consists of 10 frames
+  - 10 frames for each player
 
-  - in each frame, every player will have 2 chances (plus 1 bonus chance could be awarded) to score as many pins as possible
+  - in each frame, every player will have 2 chances (plus 1  chance could be awarded in 10th frame) to score as many pins as possible
 
   - one point is scored for each pin
 
-  - if there are more than one player, every player will take his/her turn in a predetermined order
+  - every player will take his/her turn in a predetermined order
 
   - if a player knocks down all ten pins with their first ball, he is awarded a strike
 
@@ -63,26 +63,36 @@ This test plan has following objectives:
     | Frame 1, ball 1: | 10 pins (strike)  |
     | Frame 2, ball 1: | 3 pins            |
     | Frame 2, ball 2: | 6 pins            |
-    | Frame one score: | 10 + (3 + 6) = 19 |
-    | Frame two score: | 3 + 6 = 9         |
+    |  Frame 1 score:  | 10 + (3 + 6) = 19 |
+    |  Frame 2 score:  | 3 + 6 = 9         |
     |     TOTAL =      | 28                |
 
     **example of multiple strikes in succession :**
 
-    |                    |                    |
-    | :----------------: | ------------------ |
-    |  Frame 1, ball 1:  | 10 pins (strike)   |
-    |  Frame 2, ball 1:  | 10 pins (strike)   |
-    |  Frame 3, ball 1:  | 4 pins             |
-    |  Frame 3, ball 2:  | 2 pins             |
-    |  Frame one score:  | 10 + (10 + 4) = 24 |
-    |  Frame two score:  | 10 + (4 + 2) = 16  |
-    | Frame three score: | 4 + 2 = 6          |
-    |      TOTAL =       | 46                 |
+    |                  |                    |
+    | :--------------: | ------------------ |
+    | Frame 1, ball 1: | 10 pins (strike)   |
+    | Frame 2, ball 1: | 10 pins (strike)   |
+    | Frame 3, ball 1: | 4 pins             |
+    | Frame 3, ball 2: | 2 pins             |
+    |  Frame 1 score:  | 10 + (10 + 4) = 24 |
+    |  Frame 2 score:  | 10 + (4 + 2) = 16  |
+    |  Frame 3 score:  | 4 + 2 = 6          |
+    |     TOTAL =      | 46                 |
+
+
 
 #### Test items
 
 - game prototype back end code files (Main.py and BowlingGame.py) 
+  - **BowlingGame.py** has main score() function which checks each pins value from given list pins[] and follows this logic:
+    1. checks if pin has value of 10  (isStrike() function) and if true adds next two pins' values to current frame score (strikeScore() function)
+    2. if first step was false, function checks if there is a spare  (isSpare() function) and counts points accordingly  (spareScore() function)
+    3. in case of no score or spare two pins' values add together and pins' list index jumps +2
+    4. there is also roll() function which appends input values to the pins' list
+
+  - **Main.py** is file with several test functions which feed different pin values to game and check that result is correct. (more details  in section below)
+
 - pycharm IDE will be used mainly for testing, debugging and refactoring python files (Main.py and BowlingGame.py)
 - game rules described in project assignment instructions (section above)
 
@@ -90,19 +100,24 @@ This test plan has following objectives:
 
 - any bugs, typos or syntax errors absence in the source code (they should be fixed before testing  code logic)
 - game rules are implemented into the code logic:
-  - 
+  - as a player rolling all zeros (test_gutter_game() function in Main.py). Result (score() function in BowlingGame.py) should be zero
+  - as a player rolling all ones (test_all_ones() function in Main.py). The result should be 20
+  - as a player rolling one  "spare"  plus one more none-zero frame and all other frames as zeros 
+  - as a player rolling one "strike " plus one more none-zero frame and all other frames as zeros
+  - as a player rolling perfect game. The result should be 300
+  - as a player rolling all spares (all fives). The result should be 150
 
 #### Features Not To Be Tested
 
 - ​	Not others than mentioned in section above
 - ​    GUI and I/O parts of the software are not developed so not to be tested
-- 
 
 #### Approach
 
 - Tests should be run for each test case per  tester
 - Tester should execute each step of every test case and mark it as "pass" or "fail"
 - In case of failure of any step it should be reported in appropriate comment section
+- 
 - Once all tests are done test manager should review them and produce the Test Summary Report
 
 #### Item Pass/Fail Criteria
@@ -161,7 +176,7 @@ N/A
 
 
 
-## **Task 2: Test Cases**
+## **Task 2: Test Cases** (conducted and documented)
 
 #### test case 1 (BowlingGame.py )
 
@@ -171,9 +186,9 @@ N/A
 |      |                                |                                  | go to "problems" tab at  the bottom                          | tab opened                            |    p1    |         |   pass    |                              |
 |      |                                |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |       28 weak warnings       |
 |      |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git |
-|      |                                |                                  | check for other warnings or typos and fix them if possible   | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |
+|      |                                |                                  | check for other warnings or typos and fix them               | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |
 
-#### test case 1 (Main.py )
+#### test case 2 (Main.py )
 
 | ID   |        case name        |       pre-requisite       | procedure                                                    | expected result                       | priority | author  | pass/fail |           comment            |
 | ---- | :---------------------: | :-----------------------: | :----------------------------------------------------------- | :------------------------------------ | :------: | ------- | :-------: | :--------------------------: |
@@ -181,4 +196,4 @@ N/A
 |      |                         |                           | go to "problems" tab at  the bottom                          | tab was opened                        |    p1    |         |   pass    |                              |
 |      |                         |                           | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |       20 weak warnings       |
 |      |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git |
-|      |                         |                           | check for other warnings or typos and fix them if possible   | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |
+|      |                         |                           | check for other warnings or typos and fix them               | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |

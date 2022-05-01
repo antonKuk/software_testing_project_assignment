@@ -6,31 +6,32 @@ class BowlingGame:
         self.rolls.append(pins)
 
     def score(self):
+        """"""
         result = 0
         roll_index = 0
         for frameIndex in range(10):
-            if frameIndex in range(10):
-                result += self.strike_score(roll_index)
+            if self.isStrike(roll_index):
+                result += self.strikeScore(roll_index)
                 roll_index += 1
-            elif self.is_spare(roll_index):
-                result += self.spare_score(roll_index)
+            elif self.isSpare(roll_index):
+                result += self.spareScore(roll_index)
                 roll_index += 2
             else:
-                result += self.frame_score(roll_index)
-            roll_index += 2
-            return result
+                result += self.frameScore(roll_index)
+                roll_index += 2
+        return result
 
-    def is_strike(self, roll_index):
+    def isStrike(self, roll_index):
         return self.rolls[roll_index] == 10
 
-    def is_spare(self, roll_index):
+    def isSpare(self, roll_index):
         return self.rolls[roll_index] + self.rolls[roll_index + 1] == 10
 
-    def strike_score(self, roll_index):
+    def strikeScore(self, roll_index):
         return 10 + self.rolls[roll_index + 1] + self.rolls[roll_index + 2]
 
-    def spare_score(self, roll_index):
+    def spareScore(self, roll_index):
         return 10 + self.rolls[roll_index + 2]
 
-    def frame_score(self, roll_index):
+    def frameScore(self, roll_index):
         return self.rolls[roll_index] + self.rolls[roll_index + 1]
