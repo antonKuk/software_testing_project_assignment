@@ -178,22 +178,76 @@ N/A
 
 ## **Task 2: Test Cases** (conducted and documented)
 
-#### test case 1 (BowlingGame.py )
 
-| ID   |           case name            |          pre-requisite           | procedure                                                    | expected result                       | priority | author  | pass/fail |           comment            |
-| ---- | :----------------------------: | :------------------------------: | :----------------------------------------------------------- | :------------------------------------ | :------: | ------- | :-------: | :--------------------------: |
-| 1    | BowlingGame.py syntactic fixes | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened                           |    p1    | Anton_K |   pass    |                              |
-|      |                                |                                  | go to "problems" tab at  the bottom                          | tab opened                            |    p1    |         |   pass    |                              |
-|      |                                |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |       28 weak warnings       |
-|      |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git |
-|      |                                |                                  | check for other warnings or typos and fix them               | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |
 
-#### test case 2 (Main.py )
+#### test case 1: BowlingGame.py
 
-| ID   |        case name        |       pre-requisite       | procedure                                                    | expected result                       | priority | author  | pass/fail |           comment            |
-| ---- | :---------------------: | :-----------------------: | :----------------------------------------------------------- | :------------------------------------ | :------: | ------- | :-------: | :--------------------------: |
-| 1    | Main.py syntactic fixes | Main.py file, pycharm IDE | open Main.py file in pycharm IDE                             | file was opened                       |    p1    | Anton_K |   pass    |                              |
-|      |                         |                           | go to "problems" tab at  the bottom                          | tab was opened                        |    p1    |         |   pass    |                              |
-|      |                         |                           | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |       20 weak warnings       |
-|      |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option and any other manual options if necessary | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git |
-|      |                         |                           | check for other warnings or typos and fix them               | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git |
+| ID   |           case name            |          pre-requisite           | procedure                                                    | expected result                       | priority | author  | pass/fail |                           comment                            |
+| ---- | :----------------------------: | :------------------------------: | :----------------------------------------------------------- | :------------------------------------ | :------: | ------- | :-------: | :----------------------------------------------------------: |
+| 1    | BowlingGame.py syntactic fixes | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened                           |    p1    | Anton_K |   pass    |                                                              |
+|      |                                |                                  | go to "problems" tab at  the bottom                          | tab opened                            |    p1    |         |   pass    |                                                              |
+|      |                                |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       24 weak warnings                       |
+| 1.1  |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 1.2  |                                |                                  | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+
+
+
+#### test case 2: Main.py 
+
+| ID   |        case name        |       pre-requisite       | procedure                                                    | expected result                       | priority | author  | pass/fail |                           comment                            |
+| ---- | :---------------------: | :-----------------------: | :----------------------------------------------------------- | :------------------------------------ | :------: | ------- | :-------: | :----------------------------------------------------------: |
+| 2    | Main.py syntactic fixes | Main.py file, pycharm IDE | open Main.py file in pycharm IDE                             | file is opened                        |    p1    | Anton_K |   pass    |                                                              |
+|      |                         |                           | go to "problems" tab at  the bottom                          | tab is opened                         |    p1    |         |   pass    |                                                              |
+|      |                         |                           | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       20 weak warnings                       |
+| 2.1  |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 2.2  |                         |                           | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+
+
+
+#### test case 3:  Main.py test modules
+
+| ID   |          case name          |       pre-requisite       | procedure                                                    | expected result             | priority | author  | pass/fail |                 comment                  |
+| ---- | :-------------------------: | :-----------------------: | :----------------------------------------------------------- | :-------------------------- | :------: | ------- | :-------: | :--------------------------------------: |
+| 3    | test_gutter_game() function | Main.py file, pycharm IDE | open Main.py file as project in pycharm IDE                  | file is opened              |    p1    | Anton_K |   pass    |                                          |
+| 3.1  |                             |                           | run Main.py by clicking on green triangle on top of IDE      | test was run                |    p1    |         |   pass    |                                          |
+| 3.2  |                             |                           | in a "run" tub select "testAllOnes" module and check for "OK" message | test module passed the test |    p2    |         |   fail    | TypeError: 'list' object is not callable |
+|      |                             |                           | in a "run" tub select "testAllSpare" module and check for "OK" message | test module passed the test |    p1    |         |   fail    | TypeError: 'list' object is not callable |
+|      |                             |                           | in a "run" tub select "testGutterGame" module and check for "OK" message | test module passed the test |    p1    |         |   fail    | TypeError: 'list' object is not callable |
+|      |                             |                           | in a "run" tub select "testOneSpare" module and check for "OK" message | test module passed the test |    p1    |         |   fail    | TypeError: 'list' object is not callable |
+|      |                             |                           | in a "run" tub select "testOneStrike" module and check for "OK" message | test module passed the test |    p1    |         |   fail    | TypeError: 'list' object is not callable |
+|      |                             |                           | in a "run" tub select "testPerfectGame" module and check for "OK" message | test module passed the test |    p1    |         |   fail    | TypeError: 'list' object is not callable |
+
+
+
+#### Test cases log section
+
+####  case 1
+
+Index 1.1:	 24 weak warnings are fixed with pycharm "reformat" option
+
+Index 1.2:	 
+
+- 5 warnings ("rollIndex" Argument name should be lowercase, refactored to "roll_index")
+- typo in function name in line 29. renamed to "strikeScore"
+- typo in function name in line 13. renamed to "strikeScore"
+- wrong identation in line 21 in function score(). it was returning "result" every iteration
+
+
+
+#### case 2
+
+Index 2.1:  	
+
+- 20 weak warnings are fixed with Pycharm "reformat" option
+- "Redeclared 'testOneSpare' defined above without usage" warning message. Function "testOneSpare" was declared two times. Function checks 150 score in line 39 which is "All Spare" score. Therefore function was renamed to "testAllSpare"
+
+
+
+
+
+
+
+
+
+
+
