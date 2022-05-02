@@ -321,7 +321,7 @@ No variances have been identified.
 - 44 weak warning errors were fixed in two files
 -  three functions and one variable names were changed
 - 2 wrong identations were fixed
-- three logical errors were corrected
+- at least three logical errors were corrected
 
 #### approvals
 
