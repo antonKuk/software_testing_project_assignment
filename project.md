@@ -187,8 +187,8 @@ N/A
 | 1    | BowlingGame.py syntactic fixes | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened                           |    p1    | Anton_K |   pass    |                                                              |
 |      |                                |                                  | go to "problems" tab at  the bottom                          | tab opened                            |    p1    |         |   pass    |                                                              |
 |      |                                |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       24 weak warnings                       |
-| 1.1  |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
-| 1.2  |                                |                                  | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 1.1  |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
+| 1.2  |                                |                                  | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
 
 
 
@@ -199,65 +199,61 @@ N/A
 | 2    | Main.py syntactic fixes | Main.py file, pycharm IDE | open Main.py file in pycharm IDE                             | file is opened                        |    p1    | Anton_K |   pass    |                                                              |
 |      |                         |                           | go to "problems" tab at  the bottom                          | tab is opened                         |    p1    |         |   pass    |                                                              |
 |      |                         |                           | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       20 weak warnings                       |
-| 2.1  |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
-| 2.2  |                         |                           | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 2.1  |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
+| 2.2  |                         |                           | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
 
 
 
 #### test case 3:  Main.py test modules
 
-| ID   |          case name          |       pre-requisite       | procedure                                                    | expected result                  | priority | author  | pass/fail |                           comment                            |
-| ---- | :-------------------------: | :-----------------------: | :----------------------------------------------------------- | :------------------------------- | :------: | ------- | :-------: | :----------------------------------------------------------: |
-| 3    | test_gutter_game() function | Main.py file, pycharm IDE | open Main.py file as project in pycharm IDE                  | file is opened                   |    p1    | Anton_K |   pass    |                                                              |
-| 3.1  |                             |                           | run Main.py by clicking on green triangle on top of IDE      | test was run                     |    p1    |         |   pass    |                                                              |
-| 3.2  |                             |                           | in a "run" tub select "testAllOnes" module and check for "OK" message | test module passed the test      |    p2    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.3  |                             |                           | in a "run" tub select "testAllSpare" module and check for "OK" message | test module passed the test      |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.4  |                             |                           | in a "run" tub select "testGutterGame" module and check for "OK" message | test module passed the test      |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.5  |                             |                           | in a "run" tub select "testOneSpare" module and check for "OK" message | test module passed the test      |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.6  |                             |                           | in a "run" tub select "testOneStrike" module and check for "OK" message | test module passed the test      |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.7  |                             |                           | in a "run" tub select "testPerfectGame" module and check for "tests OK" message | test module passed the test      |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.8  |                             |                           | for each test module fix errors and and repeat steps 3.1 -3.7 until 3.2-3.7 modules all have "pass" state | all test modules passed the test |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| ID   |          case name          |       pre-requisite       | procedure                                                    | expected result                   | priority | author  | pass/fail |                           comment                            |
+| ---- | :-------------------------: | :-----------------------: | :----------------------------------------------------------- | :-------------------------------- | :------: | ------- | :-------: | :----------------------------------------------------------: |
+| 3    | test_gutter_game() function | Main.py file, pycharm IDE | open Main.py file as project in pycharm IDE                  | file is opened                    |    p1    | Anton_K |   pass    |                                                              |
+| 3.1  |                             |                           | run Main.py by clicking on green triangle on top of IDE      | test was run                      |    p1    |         |   pass    |                                                              |
+| 3.2  |                             |                           | in a "run" tub select "testAllOnes" module and check for no error messages | no error messages                 |    p2    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.3  |                             |                           | in a "run" tub select "testAllSpare" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.4  |                             |                           | in a "run" tub select "testGutterGame" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.5  |                             |                           | in a "run" tub select "testOneSpare" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.6  |                             |                           | in a "run" tub select "testOneStrike" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.7  |                             |                           | in a "run" tub select "testPerfectGame" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.8  |                             |                           | for each test module fix errors and and repeat steps 3.1 -3.7 until 3.2-3.7 modules all have no error messages | all test modules passed the tests |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
 
 
 
-#### Test cases log section
+#### Test cases report section
 
-####  case 1
+####  test case 1 report
 
 Index 1.1:	 24 weak warnings are fixed with pycharm "reformat" option
 
 Index 1.2:	 
 
-- 5 warnings ("rollIndex" Argument name should be lowercase, refactored to "roll_index")
+- 5 warnings "rollIndex" Argument name should be lowercase", refactored to "roll_index"
+
+- "if frameIndex in range(10):" in line 12:  there is no need to check that "frameIndex" variable is in range, because "for" loop does it automatically.  Instead isStrike(roll_index), checking for "strike" has to be done. Refactored to "if self.isStrike(roll_index):"
 
 - typo in function name in line 29. renamed to "strikeScore"
 
 - typo in function name in line 13. renamed to "strikeScore"
 
-- wrong identation in line 21 in function score(). it was returning "result" every iteration
+- wrong identation in line 20. fixed
 
-- "if frameIndex in range(10):" in line 12,  there is no need to check that "frameIdex" variable is in range, because "for" loop does it automatically.  Instead isStrike(roll_index) checking for "strike" pin has to be done. Refactored to "if self.isStrike(roll_index):"
-
-- it was wrong identation in line 20. fixed.
+- wrong identation in line 21 in function score(). it was returning "result" every iteration. fixed
 
   
 
-
-
-#### case 2
+#### test case 2 report
 
 Index 2.1:  	
 
 - 20 weak warnings are fixed with Pycharm "reformat" option
-- "Redeclared 'testOneSpare' defined above without usage" warning message. Function "testOneSpare" was declared two times. Function checks 150 score in line 39 which is "All Spare" score. Therefore function was renamed to "testAllSpare"
+- "Redeclared 'testOneSpare' defined above without usage" warning message. Function "testOneSpare" was declared two times. Second function checks  for 150 score in line 39 which is "All Spare" score. Therefore function was renamed to "testAllSpare"
 
-
-
-#### case 3
+#### test case 3 report
 
 indexs 3.2-3.7:
 
-- all test modules were reporting same error message "TypeError: 'list' object is not callable", "self.game.rolls(pins)" was trying to call rolls[] list in BowlingGame.py as function. Correct function name is "self.game.roll(pins)". Refactored in every test function (name changed to "roll")
+- all test modules were reporting same error message "TypeError: 'list' object is not callable", "self.game.rolls(pins)" was trying to call rolls[] list in BowlingGame.py as function. Correct function call is "self.game.roll(pins)". Refactored in every test function (name changed to "roll")
 
 
 
