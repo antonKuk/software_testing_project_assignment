@@ -93,12 +93,12 @@ This test plan has following objectives:
 
   - **Main.py** is a file with several test cases functions which feed different pin values to game and check that result is correct. (more details  in section below)
 
-- pycharm IDE will be used mainly for testing, debugging and refactoring python files (Main.py and BowlingGame.py)
+- Pycharm IDE will be used  for testing, debugging and refactoring python files (Main.py and BowlingGame.py)
 - game rules described in project assignment instructions (section above)
 
 #### Features To Be Tested
 
-- any bugs, typos or syntax errors absence in the source code (they should be fixed before testing  code logic)
+- any bugs, typos, logical or syntax errors absence in the source code (they should be fixed before testing  code logic)
 - game rules are implemented into the code logic:
   - as a player rolling all zeros. Result  should be zero
   - as a player rolling all ones. The result should be 20
@@ -269,15 +269,61 @@ procedures 3.2-3.7:
 
 
 
+### summary
 
+- items tested:   bugs, typos, syntax and logical errors absence in the source code of the bowling game prototype
+- environment: desktop computer with windows 10 and Pycharm IDE
+- references:  
+  -  game rules provided with project document
+  - game source code file (BowlingGame.py)
+  - file with test cases functions (Main.py)
+  - git repository  https://github.com/antonKuk/software_testing_project_assignment.git
+  - Pythondoc documentation
+- Several logical, typos and syntax errors were found (see section above)
+- All errors were fixed
+- test modules are all functioning as expected now
 
+### variances
 
+No variances have been identified.
 
+#### comprehensiveness assessment
 
+- test cases results are showing that following game rules are implemented into the tested code logic:
 
+  - if a player rolling all zeros, showing result  is zero
 
+  - if a player rolling all ones, showing result is 20
 
+  - if a player rolling one  "spare"   plus one more none-zero frame and all other frames as zeros, showing result is correct
 
+  - if a player rolling one "strike " plus one more none-zero frame and all other frames as zeros, showing result is correct
 
+  - if a player rolling perfect game, showing result is 300
 
+  - if a player rolling all spares (all fives), showing result is 150
+
+    
+
+#### summary of results
+
+- all test modules are  functioning now according to the game objectives
+
+  
+
+#### evaluation
+
+- basic logic structure of game code is good at this scope, but with big percentage of errors
+
+#### summary of activities
+
+- three test cases were conducted and documented with six python testing modules conducted in test case 3
+- 44 weak warning errors were fixed in two files
+-  three functions and one variable names were changed
+- 2 wrong identations were fixed
+- three logical errors were corrected
+
+#### approvals
+
+N/A
 
