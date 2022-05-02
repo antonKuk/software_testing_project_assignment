@@ -91,7 +91,7 @@ This test plan has following objectives:
     3. in case of no score or spare two pins' values add together and pins' list index jumps +2
     4. there is also roll() function which appends input values to the pins' list
 
-  - **Main.py** is file with several test functions which feed different pin values to game and check that result is correct. (more details  in section below)
+  - **Main.py** is a file with several test cases functions which feed different pin values to game and check that result is correct. (more details  in section below)
 
 - pycharm IDE will be used mainly for testing, debugging and refactoring python files (Main.py and BowlingGame.py)
 - game rules described in project assignment instructions (section above)
@@ -100,8 +100,8 @@ This test plan has following objectives:
 
 - any bugs, typos or syntax errors absence in the source code (they should be fixed before testing  code logic)
 - game rules are implemented into the code logic:
-  - as a player rolling all zeros (test_gutter_game() function in Main.py). Result (score() function in BowlingGame.py) should be zero
-  - as a player rolling all ones (test_all_ones() function in Main.py). The result should be 20
+  - as a player rolling all zeros. Result  should be zero
+  - as a player rolling all ones. The result should be 20
   - as a player rolling one  "spare"  plus one more none-zero frame and all other frames as zeros 
   - as a player rolling one "strike " plus one more none-zero frame and all other frames as zeros
   - as a player rolling perfect game. The result should be 300
@@ -117,7 +117,7 @@ This test plan has following objectives:
 - Tests should be run for each test case per  tester
 - Tester should execute each step of every test case and mark it as "pass" or "fail"
 - In case of failure of any step it should be reported in appropriate comment section
-- 
+- all changes should be git committed and reported in report section 
 - Once all tests are done test manager should review them and produce the Test Summary Report
 
 #### Item Pass/Fail Criteria
@@ -187,8 +187,8 @@ N/A
 | 1    | BowlingGame.py syntactic fixes | BowlingGame.py file, pycharm IDE | open BowlingGame.py file in pycharm IDE                      | file opened                           |    p1    | Anton_K |   pass    |                                                              |
 |      |                                |                                  | go to "problems" tab at  the bottom                          | tab opened                            |    p1    |         |   pass    |                                                              |
 |      |                                |                                  | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       24 weak warnings                       |
-| 1.1  |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
-| 1.2  |                                |                                  | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
+| 1.1  |                                |                                  | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 1.2  |                                |                                  | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
 
 
 
@@ -199,8 +199,8 @@ N/A
 | 2    | Main.py syntactic fixes | Main.py file, pycharm IDE | open Main.py file in pycharm IDE                             | file is opened                        |    p1    | Anton_K |   pass    |                                                              |
 |      |                         |                           | go to "problems" tab at  the bottom                          | tab is opened                         |    p1    |         |   pass    |                                                              |
 |      |                         |                           | check if  no "weak warnings" are displayed                   | no weak warning messages              |    p2    |         |   fail    |                       20 weak warnings                       |
-| 2.1  |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
-| 2.2  |                         |                           | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
+| 2.1  |                         |                           | if any "weak warnings" are displayed press alt+Enter and click "reformat the file" option | option was clicked, changes were made |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
+| 2.2  |                         |                           | check for other warnings (typos, wrong indentation, wrong naming format so on) and fix them | no warnings or typo messages          |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
 
 
 
@@ -215,47 +215,57 @@ N/A
 | 3.4  |                             |                           | in a "run" tub select "testGutterGame" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
 | 3.5  |                             |                           | in a "run" tub select "testOneSpare" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
 | 3.6  |                             |                           | in a "run" tub select "testOneStrike" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.7  |                             |                           | in a "run" tub select "testPerfectGame" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
-| 3.8  |                             |                           | for each test module fix errors and and repeat steps 3.1 -3.7 until 3.2-3.7 modules all have no error messages | all test modules passed the tests |    p1    |         |   pass    | changes are committed to git, notes added to report section below |
+| 53.7 |                             |                           | in a "run" tub select "testPerfectGame" module and check for no error messages | no error messages                 |    p1    |         |   fail    |           TypeError: 'list' object is not callable           |
+| 3.8  |                             |                           | for each test module in "run" tub fix errors and and repeat steps 3.1 -3.7 until 3.2-3.7 modules all have no error messages | all test modules passed the tests |    p1    |         |   pass    | changes are committed to git, notes added to log section below |
 
 
 
-#### Test cases report section
+## Test cases log section
 
-####  test case 1 report
+####  test case 1 log
 
-Index 1.1:	 24 weak warnings are fixed with pycharm "reformat" option
+procedure 1.1:	 24 weak warnings are fixed with pycharm "reformat" option
 
-Index 1.2:	 
+procedure 1.2:	 
 
 - 5 warnings "rollIndex" Argument name should be lowercase", refactored to "roll_index"
 
 - "if frameIndex in range(10):" in line 12:  there is no need to check that "frameIndex" variable is in range, because "for" loop does it automatically.  Instead isStrike(roll_index), checking for "strike" has to be done. Refactored to "if self.isStrike(roll_index):"
 
-- typo in function name in line 29. renamed to "strikeScore"
-
 - typo in function name in line 13. renamed to "strikeScore"
 
-- wrong identation in line 20. fixed
+- typo in function name in line 29. renamed to "strikeScore"
+
+- wrong identation in line 20 (else statement). fixed
 
 - wrong identation in line 21 in function score(). it was returning "result" every iteration. fixed
 
   
 
-#### test case 2 report
+#### test case 2 log
 
-Index 2.1:  	
+procedure 2.1:  	
 
 - 20 weak warnings are fixed with Pycharm "reformat" option
-- "Redeclared 'testOneSpare' defined above without usage" warning message. Function "testOneSpare" was declared two times. Second function checks  for 150 score in line 39 which is "All Spare" score. Therefore function was renamed to "testAllSpare"
+- "Redeclared 'testOneSpare' defined above without usage" warning message in line 37. Function "testOneSpare" was declared two times. Second function checks  for 150 score in line 39 which is "All Spare" score. Therefore function was renamed to "testAllSpare". refactored
 
-#### test case 3 report
+#### test case 3 log
 
-indexs 3.2-3.7:
+procedures 3.2-3.7:
 
 - all test modules were reporting same error message "TypeError: 'list' object is not callable", "self.game.rolls(pins)" was trying to call rolls[] list in BowlingGame.py as function. Correct function call is "self.game.roll(pins)". Refactored in every test function (name changed to "roll")
 
 
+
+# **Report**
+
+
+
+#### Identifier
+
+##### 10 pin bowling game prototype report  TSR_1.0
+
+##### *version author* : Anton_K
 
 
 
